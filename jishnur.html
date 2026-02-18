@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>For My Love ❤️</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            margin-top: 100px;
+        }
+        h1 {
+            font-size: 28px;
+        }
+        #noBtn {
+            position: absolute;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            margin: 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        #yesBtn {
+            background-color: #ff4d6d;
+            color: white;
+        }
+        #noBtn {
+            background-color: #999;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Bada Bacha ❤️<br>Will you accept my love?</h1>
+
+    <button id="yesBtn" onclick="showLove()">Yes 💖</button>
+    <button id="noBtn" onmouseover="moveButton()">No 😜</button>
+
+    <h2 id="message"></h2>
+
+    <script>
+        function moveButton() {
+            var button = document.getElementById("noBtn");
+            var x = Math.random() * (window.innerWidth - 100);
+            var y = Math.random() * (window.innerHeight - 50);
+            button.style.left = x + "px";
+            button.style.top = y + "px";
+        }
+
+        function showLove() {
+            document.getElementById("message").innerHTML =
+                "You just made me the happiest person in the world ❤️<br>" +
+                "I promise to protect your smile, hold your hand, and love you forever 💕<br>" +
+                "My bada bacha, you are my heart, my happiness, my everything 💖";
+        }
+    </script>
+
+</body>
+</html>
